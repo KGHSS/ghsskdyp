@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JRC | Kadayiruppu GHSS</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/GHSS.jpg">
+</head>
+<body>
+ <div id="google_translate_element" style="display:none;"></div>
+<header id="navbar">
+  <a href="index.html" class="home">
+    <h1>GHSS KADAYIRUPPU</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="club.html">Clubs</a>
+    <div class="dropdown" tabindex="0">
+      <button class="dropbtn">Materials ▾</button>
+      <div class="dropdown-content">
+        <a href="class5.html" >Class 5</a>
+        <a href="class6.html">Class 6</a>
+        <a href="class7.html">Class 7</a>
+        <a href="class8.html">Class 8</a>
+        <a href="class9.html">Class 9</a>
+        <a href="class10.html">Class 10</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+      </div>
+    </div>
+    <a href="announcement-display.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="report.html">Report</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section class="club-panel">
+  <div class="club-left">
+    <h2>JRC</h2>
+    <h4>Junior Red Cross</h4>
+    <p>
+      The Junior Red Cross (JRC) is a globally recognized youth movement guided by the principles of the Red Cross Society — humanity, impartiality, neutrality, independence, voluntary service, unity, and universality. At GHSS Kadayiruppu, our JRC unit stands as a beacon of compassion and humanitarian values, aiming to cultivate socially responsible and empathetic students from a young age.
+    </p>
+    <p>
+      The club serves as a platform for students to learn about health, hygiene, disaster preparedness, and social service. Through workshops, seminars, and field activities, members are trained to respond effectively in times of need — whether it's administering first aid, organizing health check-up camps, or assisting during community emergencies. The spirit of JRC encourages students to see service as not just an act but a way of life.
+    </p>
+    <p>
+      Students actively participate in various awareness campaigns including blood donation drives, anti-drug movements, menstrual hygiene awareness, and environmental conservation. The club fosters leadership and teamwork through group tasks, mock drills, poster-making competitions, and street plays that educate the public on pressing social issues.
+    </p>
+    <p>
+      Apart from health initiatives, JRC members are also involved in developing friendships across borders through letter exchanges and collaborative projects with JRC units from other states and countries, fostering peace and mutual understanding. The Red Cross Day is celebrated annually with vibrant programs, recognizing the contributions of student volunteers.
+    </p>
+    <p>
+      The Junior Red Cross of GHSS Kadayiruppu is not just a club — it is a mission. A mission to uplift communities, care for the vulnerable, and mold students into future leaders with a heart for humanity.
+    </p>
+    <ul>
+      <li>First Aid & Emergency Response Training</li>
+      <li>Community Health & Sanitation Drives</li>
+      <li>Red Cross Day Celebrations</li>
+      <li>Awareness Campaigns (Blood, Drugs, Hygiene)</li>
+      <li>Disaster Management Workshops</li>
+      <li>Friendship Projects with Global JRC Units</li>
+      <li>Creative Outreach: Posters, Street Plays, Quizzes</li>
+    </ul>
+  </div>
+  <div class="club-right">
+    <img src="images/jrc1.jpg" alt="JRC Activity 1" />
+    <img src="images/jrc2.jpg" alt="JRC Activity 2" />
+    <img src="images/jrc3.jpg" alt="JRC Activity 3" style="height: 500px;"/>
+  </div>
+</section>
+  <footer>
+    &copy;2025 SNGCE CSE Department. All rights reserved.
+  </footer>
+<button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/right-tab-announcements.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>

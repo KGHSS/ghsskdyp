@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Guidance | Kadayiruppu GHSS</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/GHSS.jpg">
+</head>
+<body>
+   <div id="google_translate_element" style="display:none;"></div>
+<header id="navbar">
+  <a href="index.html" class="home">
+    <h1>GHSS KADAYIRUPPU</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="club.html">Clubs</a>
+    <div class="dropdown" tabindex="0">
+      <button class="dropbtn">Materials ▾</button>
+      <div class="dropdown-content">
+        <a href="class5.html" id="sel">Class 5</a>
+        <a href="class6.html">Class 6</a>
+        <a href="class7.html">Class 7</a>
+        <a href="class8.html">Class 8</a>
+        <a href="class9.html">Class 9</a>
+        <a href="class10.html">Class 10</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+      </div>
+    </div>
+    <a href="announcement-display.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="report.html">Report</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="club-panel">
+  <div class="club-left">
+    <h2>Career Guidance Cell</h2>
+    <h4>Empowering Future Choices</h4>
+    <p>
+      The Career Guidance Cell at GHSS Kadayiruppu plays a pivotal role in shaping the future of students by offering timely information, mentorship, and personalized support in exploring career opportunities. It aims to bridge the gap between academic learning and real-world career possibilities.
+    </p>
+    <p>
+      The cell conducts seminars and webinars on higher education, competitive exams, skill development, entrepreneurship, and job market trends. Renowned professionals, alumni, and career counselors are invited to share their journeys and interact with students.
+    </p>
+    <p>
+      Students are guided to identify their strengths, set goals, and make informed decisions regarding subject selection, entrance exams, scholarships, and vocational paths. Special sessions are held for students from rural or underprivileged backgrounds to ensure equal access to career opportunities.
+    </p>
+    <p>
+      Mock interviews, aptitude tests, resume-building workshops, and field visits are integral parts of the program. The cell also collaborates with various governmental and private career bodies for updated content and career expos.
+    </p>
+    <ul>
+      <li>Career Counseling & Psychometric Testing</li>
+      <li>Sessions on NEET, JEE, UPSC, PSC & More</li>
+      <li>Workshops on Resume Writing & Soft Skills</li>
+      <li>Interaction with Industry Experts & Alumni</li>
+      <li>Career Fairs & Field Exposure Visits</li>
+    </ul>
+  </div>
+  <div class="club-right">
+    <img src="images/cg1.jpg" alt="Career Cell Activity 1" style="height: 300px;" />
+    <img src="images/cg2.jpg" alt="Career Cell Activity 2" style="height: 300px;"/>
+    <img src="images/cg3.jpg" alt="Career Cell Activity 3" />
+  </div>
+</section>
+
+
+  <footer>
+    &copy;2025 SNGCE CSE Department. All rights reserved.
+  </footer>
+  <button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/right-tab-announcements.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>

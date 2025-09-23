@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Kadayiruppu GHSS</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/GHSS.jpg">
+</head>
+<body>
+   <div id="google_translate_element" style="display:none;"></div>
+<header id="navbar">
+  <a href="index.html" class="home">
+    <h1>GHSS KADAYIRUPPU</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="club.html">Clubs</a>
+    <div class="dropdown" tabindex="0">
+      <button class="dropbtn">Materials ▾</button>
+      <div class="dropdown-content">
+        <a href="class5.html" >Class 5</a>
+        <a href="class6.html">Class 6</a>
+        <a href="class7.html">Class 7</a>
+        <a href="class8.html">Class 8</a>
+        <a href="class9.html">Class 9</a>
+        <a href="class10.html">Class 10</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+      </div>
+    </div>
+    <a href="announcement-display.html">Announcements</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="report.html">Report</a>
+      <a href="contact.html" id="sel">Contact</a>
+    </nav>
+    
+  </header>
+
+    <main class="content">
+        <center>
+          <h2 style="text-align: center;">Contact us :</h2>
+        </center>
+        <section class="info-section">
+        <div class="info-box">
+          <center>
+            <h4>🕒 School Hours</h4>
+            <p>Monday - Friday: 8:30 AM – 3:30 PM</p>
+            <p>Saturday: 8:30 AM – 12:30 PM</p>
+            <p>Sunday: Closed</p>
+            <p>Office Hours: 9 AM – 4 PM</p>
+          </center>
+        </div>
+
+        <div class="info-box">
+          <center>
+            <h4>Contact Us :</h4>
+            <a href="mailto:ghsskadayiruppu@gmail.com" style="margin: 10px;"><img src="images/gmail.png" style="width: 40px; height: auto;"></a>
+            <a href="https://wa.me/8586868643" style="margin: 10px;" target="_blank"><img src="images/WhatsApp_icon.webp" alt="WhatsApp_icon" style="width: 40px;height: auto;"></a>
+            <a href="https://m.facebook.com/Ghsskadayirippu1/" style="margin: 10px;"><img src="images/facebook.png" style="width: 40px; height: auto;"></a>
+            <a href="https://www.youtube.com/@ghsskkadayiruppu194/featured" style="margin: 10px;"><img src="images/ar.png" style="width: 45px; height: auto;"></a>
+            <br><br>
+            <a href="tel:+918547413940" style="color:var(--primary); text-decoration: none;">Phone number: +91 8547413940</a>
+          </center>
+        </div>
+
+        <div class="info-box">
+          <center>
+            <h4>Our Address :</h4>
+            <P>Kadayiruppu,</P>
+            <p>Kolenchery,</p>
+            <p>Ernakulam KERALA, INDIA</p>
+            <p>PIN CODE :682311</P>
+          </center>
+        </div>
+      
+        <div class="info-box" style="margin-left: 15%;margin-right: 15%;padding: 10px;padding-top: 0%;">
+          <center>
+            <h4>Our Location :</h4>
+            <iframe src="https://maps.google.com/maps?q=kadayiruppu%20ghss&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          </center>
+        </div>
+      </section>
+  </main>
+  <footer style="position:fixed; bottom: 0; left: 0; width: 100%;text-align: center; padding: 10px 0;">
+      &copy; 2025 SNGCE CSE Department. All rights reserved.
+  </footer>
+  <button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/right-tab-announcements.js"></script>
+  <script src="script/main.js"></script>
+</body>

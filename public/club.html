@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clubs - Kadayiruppu GHSS</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/GHSS.jpg">
+</head>
+<body>
+   <div id="google_translate_element" style="display:none;"></div>
+<header id="navbar">
+  <a href="index.html" class="home">
+    <h1>GHSS KADAYIRUPPU</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="club.html" id="sel">Clubs</a>
+<div class="dropdown">
+  <button class="dropbtn" onclick="toggleDropdown()" >Materials ▾</button>
+  <div class="dropdown-content">
+    <a href="class5.html">Class 5</a>
+    <a href="class6.html">Class 6</a>
+    <a href="class7.html">Class 7</a>
+    <a href="class8.html">Class 8</a>
+    <a href="class9.html">Class 9</a>
+    <a href="class10.html">Class 10</a>
+    <a href="class11.html">Class 11</a>
+    <a href="class12.html">Class 12</a>
+  </div>
+</div>
+<a href="announcement-display.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="report.html">Report</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="report-section">
+  <h2>Our Clubs</h2>
+  <div class="club-container">
+    <a href="nss.html" class="club-card">
+      <img src="images/images.jpg" alt="NSS Logo">
+      <h3>NSS</h3>
+      <p>Encouraging students to participate in community service and nation-building activities.</p>
+    </a>
+    <a href="jrc.html" class="club-card">
+      <img src="images/jrc.png" alt="JRC Logo">
+      <h3>JRC</h3>
+      <p>Promoting humanitarian values, first aid awareness, and service to society among students.</p>
+    </a>
+    <a href="spc.html" class="club-card">
+      <img src="images/spc.jpg" alt="SPC Logo">
+      <h3>SPC</h3>
+      <p>Instilling discipline, leadership, and responsibility through collaboration with the Kerala Police.</p>
+    </a>
+    <a href="littlekites.html" class="club-card">
+      <img src="images/littl.jpg" alt="Little Kites Logo">
+      <h3>Little Kites</h3>
+      <p>Empowering students with IT skills and digital creativity under the KITE initiative.</p>
+    </a>
+    <a href="souhrida.html" class="club-card">
+      <img src="images/sou.jpg" alt="Souhrida Club Logo">
+      <h3>Souhrida Club</h3>
+      <p>Promoting emotional well-being, friendship, and mental health support for students.</p>
+    </a>
+    <a href="careerguidance.html" class="club-card">
+      <img src="images/career-advancement-icon-0m9d0jz7z3w177dz.png" alt="Career Guidance Logo">
+      <h3>Career Guidance</h3>
+      <p>Helping students explore future paths through counseling, seminars, and expert sessions.</p>
+    </a>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 SNGCE CSE Department. All rights reserved.
+  </footer>
+  <button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/right-tab-announcements.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

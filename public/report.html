@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kadayiruppu Government Higher Secondary School</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style/main.css" />
+         <link rel="icon" type="image/png" href="images/GHSS.jpg">
+    </head>
+
+    <body>
+       <div id="google_translate_element" style="display:none;"></div>
+    <header id="navbar">
+  <a href="index.html" class="home">
+    <h1>GHSS KADAYIRUPPU</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="club.html">Clubs</a>
+    <div class="dropdown" tabindex="0">
+      <button class="dropbtn">Materials ▾</button>
+      <div class="dropdown-content">
+        <a href="class5.html" >Class 5</a>
+        <a href="class6.html">Class 6</a>
+        <a href="class7.html">Class 7</a>
+        <a href="class8.html">Class 8</a>
+        <a href="class9.html">Class 9</a>
+        <a href="class10.html">Class 10</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+      </div>
+    </div>
+    <a href="announcement-display.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="report.html">Report</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section class="report-section" id="results">
+    <h2>Got Something To Say?</h2>
+    <h3>Reports and Enquiries section G H S S Kadayiruppu</h3>
+
+    <div class="reportcontent">
+        <fieldset id="field">
+            <legend>To Principal</legend>
+            <textarea id="principalMessage" class="reportcard"
+                placeholder="Write your message to Principal..."></textarea><br>
+            <button type="button" class="submitBtn" id="reportbutton" data-target="principalMessage"
+                data-email="principal7018@gmail.com">Submit</button>
+        </fieldset>
+
+        <fieldset id="field">
+            <legend>To Head Master</legend>
+            <textarea id="headmasterMessage" class="reportcard"
+                placeholder="Write your message to Head Master..."></textarea><br>
+            <button type="button" id="reportbutton" class="submitBtn" data-target="headmasterMessage"
+                data-email="sindhukkvku@gmail.com">Submit</button>
+        </fieldset>
+    </div>
+
+    <div class="reportcontent">
+        <fieldset id="field">
+            <legend>To Anti Narcotics Cell</legend>
+            <textarea id="antiNarcoticsMessage" class="reportcard"
+                placeholder="Write your message to Anti Narcotics Cell..."></textarea><br>
+           <button type="button" id="reportbutton" class="submitBtn"  data-target="antiNarcoticsMessage"
+                data-email="ghsskadayiruppu@gmail.com">Submit</button>
+        </fieldset>
+
+        <fieldset id="field">
+            <legend>To Anti Ragging Cell</legend>
+            <textarea id="antiRaggingMessage" class="reportcard"
+                placeholder="Write your message to Anti Ragging Cell..."></textarea><br>
+         <button type="button" class="submitBtn" id="reportbutton" data-target="antiRaggingMessage"
+                data-email="ghsskadayiruppu@gmail.com">Submit</button>
+        </fieldset>
+    </div>
+</section>
+
+
+
+        <footer>
+            &copy; 2025 SNGCE CSE Department. All rights reserved.
+        </footer>
+        <button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/right-tab-announcements.js"></script>
+        <script src="script/script.js"></script>
+        <script src="script/main.js"></script>
+    </body>
+<script src="script/main.js"></script>
+</html>

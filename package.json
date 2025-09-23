@@ -1,0 +1,29 @@
+{
+  "name": "school-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "body": "^5.1.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.0",
+    "nodemailer": "^7.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joepaul777/School-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joepaul777/School-Website/issues"
+  },
+  "homepage": "https://github.com/joepaul777/School-Website#readme",
+  "description": ""
+}

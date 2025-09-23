@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPC | Kadayiruppu GHSS</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="navbar">
+      <a href="index.html" class="home"><h1>GHSS KADAYIRUPPU</h1></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="club.html">Clubs</a>
+            <div class="dropdown"  tabindex="0">
+      <button class="dropbtn">Materials</button>
+      <div class="dropdown-content">
+       
+        <a href="class5.html">Class 5</a>
+        <a href="class6.html">Class 6</a>
+        <a href="class7.html">Class 7</a>
+        <a href="class8.html">Class 8</a>
+        <a href="class9.html">Class 9</a>
+        <a href="class10.html">Class 10</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+      </div>
+    </div>
+      <a href="gallery.html">Gallery</a>
+      <a href="report.html">Report</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<section class="club-panel">
+  <div class="club-left">
+    <h2>SPC – Student Police Cadet</h2>
+    <h4>Instilling Discipline, Responsibility & Civic Sense</h4>
+    <p>
+      The Student Police Cadet (SPC) Project is a flagship youth development initiative jointly implemented by the Kerala Police and the Education Department. At GHSS Kadayiruppu, the SPC unit plays a crucial role in instilling discipline, leadership, and social commitment in students.
+    </p>
+    <p>
+      SPC cadets are trained in various areas including traffic rules, disaster management, first aid, human rights, environmental conservation, and community service. Through physical training, parade drills, and leadership camps, the program prepares students to be law-abiding, empathetic, and proactive citizens.
+    </p>
+    <p>
+      Regular community-based activities, such as anti-drug awareness campaigns, environmental drives, and road safety programs, help cadets build strong moral values and take ownership of their social responsibilities. It also strengthens the bond between students, law enforcement, and the larger society.
+    </p>
+    <p>
+      The SPC unit fosters team spirit and national pride while nurturing the leadership potential of each cadet. Through training sessions, inter-school competitions, and field visits to police stations and academies, the students gain real-life exposure and confidence.
+    </p>
+    <ul>
+      <li>Parade Training & Fitness Activities</li>
+      <li>Law Awareness & Disaster Preparedness</li>
+      <li>Community Policing Projects</li>
+      <li>Drug Awareness & Cyber Safety Programs</li>
+      <li>Visits to Police Camps & Institutions</li>
+    </ul>
+  </div>
+  <div class="club-right">
+    <img src="images/spc1.jpg" alt="SPC Activity 1" />
+    <img src="images/spc2.jpg" alt="SPC Activity 2" />
+    <img src="images/spc3.jpg" alt="SPC Activity 3" />
+    <img src="images/spc4.jpg" alt="SPC Activity 4" />
+  </div>
+</section>
+  <footer>&copy;2025 GHSS Kadayiruppu All rights reserved.</footer>
+    <button onclick="translateToMalayalam()" id="translateButton"  >
+  മലയാളം
+</button>
+
+<!-- Google Translate Widget (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ml',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translateToMalayalam() {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = 'ml'; // Malayalam
+        select.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryTranslate() || attempts > maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
